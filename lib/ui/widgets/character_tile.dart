@@ -5,7 +5,6 @@ import 'package:shappitest/core/characters/provider.dart';
 import 'package:shappitest/core/characters/view_model.dart';
 import 'package:shappitest/core/models/character.dart';
 import 'package:shappitest/ui/contants.dart';
-import 'package:shappitest/ui/views/character_detail.dart';
 
 class CharacterTile extends ConsumerWidget {
   final Character character;
@@ -54,7 +53,7 @@ class CharacterTile extends ConsumerWidget {
                   ],
                 ),
               ),
-              Icon(Icons.chevron_right)
+              const Icon(Icons.chevron_right)
             ],
           )),
     );

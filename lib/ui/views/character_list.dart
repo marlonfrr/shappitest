@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shappitest/core/characters/enum.dart';
 import 'package:shappitest/core/characters/provider.dart';
 import 'package:shappitest/core/characters/state.dart';
 import 'package:shappitest/core/characters/view_model.dart';
 import 'package:shappitest/core/models/character.dart';
-import 'package:shappitest/ui/contants.dart';
 import 'package:shappitest/ui/widgets/bottom_bar.dart';
 import 'package:shappitest/ui/widgets/character_tile.dart';
 

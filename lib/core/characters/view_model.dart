@@ -12,9 +12,6 @@ class CharactersViewModel extends StateNotifier<CharactersState> {
 
   CharactersViewModel(this.ref) : super(CharactersState()) {
     getCharacters();
-    ref.onDispose(() {
-      print('disposing');
-    });
   }
 
   void getCharacters({int? page = 0}) async {

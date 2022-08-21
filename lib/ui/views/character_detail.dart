@@ -80,29 +80,23 @@ class _CharacterDetailState extends ConsumerState<CharacterDetail> {
                 ],
               ),
               Spacing.spacingV16,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  const Expanded(
-                    child: Text(
-                      'Episodes',
-                      style: Typographies.b0,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: ListView.builder(
-                      itemCount: widget.character.episode.length,
-                      physics: const NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      itemBuilder: (BuildContext context, int index) =>
-                          Text(widget.character.episode.elementAt(index)),
-                    ),
-                  )
-                ],
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Episodes',
+                  style: Typographies.b0,
+                ),
               ),
+              Spacing.spacingV16,
+              ListView.separated(
+                separatorBuilder: (BuildContext context, int index) =>
+                    const Divider(height: Layout.medium),
+                itemCount: widget.character.episode.length,
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemBuilder: (BuildContext context, int index) =>
+                    Text(widget.character.episode.elementAt(index)),
+              )
             ],
           ),
         ),

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Colorss {
-  static Color get mainYellow => Color.fromARGB(255, 255, 230, 0);
-  static Color get secondaryYellow => const Color.fromARGB(255, 231, 214, 64);
+  static Color get mainYellow => const Color.fromARGB(255, 255, 230, 0);
 }
 
 class Layout {
-  // TODO Remove unused
   static const double xsmall = 4;
   static const double small = 8;
   static const double medium = 16;
