@@ -4,7 +4,6 @@ import 'package:shappitest/core/characters/enum.dart';
 import 'package:shappitest/core/characters/provider.dart';
 import 'package:shappitest/core/characters/state.dart';
 import 'package:shappitest/core/models/character.dart';
-import 'package:shappitest/core/services.dart';
 import 'package:shappitest/ui/views/character_detail.dart';
 
 class CharactersViewModel extends StateNotifier<CharactersState> {
@@ -19,7 +18,7 @@ class CharactersViewModel extends StateNotifier<CharactersState> {
         ref.watch<CharactersGender?>(genderProvider);
     try {
       List<Character>? characters =
-          await RyMServices.instance.getCharacters(gender?.value, page);
+          await ref.read(serviceProvider).getCharacters(gender?.value, page);
       final currentCharacters = state.characters.asData?.value ?? [];
       currentCharacters.addAll(characters!);
       state = state.copyWith(newCharacters: AsyncValue.data(currentCharacters));
